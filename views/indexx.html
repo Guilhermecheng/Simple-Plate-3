@@ -1,0 +1,23 @@
+{% extends "fundo.html" %}
+
+{% block content %}
+<div class="content">
+    <!-- plates menu -->
+    <section id="plates-menu" class="plates_menu">
+        <div class="search-bar">
+            <input id="search-bar"type="text" placeholder="Search plate" onkeyup="searchPlate()">
+            <!-- <button> <img src="./src/images/Vector.svg" alt="search"></button> -->
+            <input type="image" src="/images/Vector.svg" alt="submit-search" class="search-button">
+        </div>
+    </section>
+
+    <!-- main plate -->
+    <section  id="container">
+        
+    </section>
+</div>
+<footer class="simple_footer">
+    Simple Plate 2021 - Some rights reserved
+</footer>
+<script src="/helpers.js"></script>
+{% endblock %}

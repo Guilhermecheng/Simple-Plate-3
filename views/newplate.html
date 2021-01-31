@@ -1,0 +1,41 @@
+{% extends "fundo.html" %}
+
+{% block content %}
+<div class="new_plate_content">
+
+    <h2 class="new_plate_title">Feel free to add a new plate!</h2>
+
+    <form class="new_plate_form" id="new_plate_form" name="new_plate_form" method="POST" action="/plate_create">
+        <label for="Name">Plate name</label>
+        <input type="text" name="plateName" required>
+
+        <label for="prepareTime">Aproximate time of prepare</label>
+        <input type="text" name="plateTime" required>
+
+        <label for="servesNumber">How many does it serve?</label>
+        <select name="plateServes" id="plateServes">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5+</option>
+        </select>
+
+        <label for="plateAddress">Address</label>
+        <input type="text" name="plateAddress" required>
+
+        <label for="">Put a link to an image of the plate here</label>
+        <input type="text" name="plateImage">
+
+        <label for="plateIngredients">Ingredients</label>
+        <input type="text" name="plateIngredients" required>
+
+        <label for="plateInstructions">Instructions</label>
+        <textarea form="new_plate_form" cols="30" rows="10" name="plateInstructions" required></textarea>
+        <button>Send</button>
+    </form>
+</div>
+<footer class="simple_footer">
+    Simple Plate 2021 - Some rights reserved
+</footer>
+{% endblock %}
